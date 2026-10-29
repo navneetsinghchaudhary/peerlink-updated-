@@ -1,0 +1,16 @@
+{
+  "name": "peer-to-peer-platform",
+  "version": "1.0.0",
+  "description": "Peer-to-Peer Community Skill & Knowledge Exchange Platform with C++ Matching Engine",
+  "scripts": {
+    "compile": "powershell -ExecutionPolicy Bypass -File ./scripts/compile.ps1",
+    "server": "node server/server.js",
+    "client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
